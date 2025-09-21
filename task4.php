@@ -56,8 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 # provide data
-#$ticketName = isset($_GET['ticket']) ? $_GET['ticket'] : null;
-$ticketName = "13";
+$ticketName = isset($_GET['ticket']) ? $_GET['ticket'] : null;
 $fieldsToFetch = ["name", "title", "type.title", "customFields.project_time", "created"];
 
 $fetchCrmRecords = RequestFactory::buildReadRequest("CrmRecords")
